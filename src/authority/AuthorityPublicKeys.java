@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AuthorityPublicKeys {
+    // map attribute to authority
     private Map<String,String> tMap ;
+    //map authority to authpublicKey
     private Map<String,AuthPublicKey> tMapAPK;
 
     public AuthorityPublicKeys() {

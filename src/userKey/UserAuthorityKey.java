@@ -9,7 +9,6 @@ public class UserAuthorityKey {
     private Map<String, UserAttributeKey> userAttKeys;
     private final String authority;
     private byte[] kjk;
-    private byte[] rjk;
     private byte[] ljk;
 
 
@@ -32,13 +31,6 @@ public class UserAuthorityKey {
 
     public void setKjk(byte[] kjk) {
         this.kjk = kjk;
-    }
-    public byte[] getRjk() {
-        return rjk;
-    }
-
-    public void setRjk(byte[] rjk) {
-        this.rjk = rjk;
     }
     public String getAuthority() {
         return authority;

@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/util/EdgeTimeCPAbe.java" line="291" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="960f778c-c20c-4a06-a182-32efa29cf768" name="Default Changelist" comment="" />
+    <list default="true" id="960f778c-c20c-4a06-a182-32efa29cf768" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/authority/AuthorityPublicKeys.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/authority/AuthorityPublicKeys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/ciphertext/Ciphertext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/ciphertext/Ciphertext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/test/MyTestEdgeCPAbe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/test/MyTestEdgeCPAbe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/userKey/UserAuthorityKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/userKey/UserAuthorityKey.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/userKey/Userkeys.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/userKey/Userkeys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/util/EdgeCPAbe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/util/EdgeCPAbe$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/edgeCPAbe/util/EdgeCPAbe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/edgeCPAbe/util/EdgeCPAbe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/authority/AuthorityPublicKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/authority/AuthorityPublicKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ciphertext/Ciphertext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ciphertext/Ciphertext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/MyTestEdgeCPAbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/MyTestEdgeCPAbe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userKey/UserAuthorityKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userKey/UserAuthorityKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userKey/Userkeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userKey/Userkeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/EdgeCPAbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/EdgeCPAbe.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,34 +31,37 @@
     <session id="553865718">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.0" value="7" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="11" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="55" />
+          <entry key="class" value="18" />
+          <entry key="java" value="90" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="55" />
+          <entry key="CLASS" value="18" />
+          <entry key="JAVA" value="90" />
           <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="java" value="4654" />
+          <entry key="java" value="8503" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4654" />
+          <entry key="JAVA" value="8503" />
           <entry key="PLAIN_TEXT" value="11" />
         </counts>
       </usages-collector>
@@ -51,46 +72,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userKey/UserAuthorityKey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-end-line="11" />
+            <state relative-caret-position="233">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/MyTestEdgeCPAbe.java">
+        <entry file="file://$PROJECT_DIR$/src/util/EdgeTimeCPAbe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="675">
+              <caret line="263" column="28" lean-forward="true" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#globalSetup#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#userRegistry#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#authoritySetup#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#genEncParam#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#encrypt#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#keyGen#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#keysGen#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#timeKeysGen#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#timeKeyCombine#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#decrypt#0;class#EdgeTimeCPAbe#0" />
+                <element signature="method#dotProduct#0;class#EdgeTimeCPAbe#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/util/EdgeCPAbe.java">
+        <entry file="file://$PROJECT_DIR$/src/test/MyTestEdgeTimeCPAbe.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/userKey/Userkeys.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="596">
+              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
               <folding>
-                <element signature="e#1067#1068#0" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
-                <element signature="e#1134#1135#0" expanded="true" />
-                <element signature="e#1166#1167#0" expanded="true" />
+                <element signature="method#EdgeTimeCPAbeTest#0;class#MyTestEdgeTimeCPAbe#0" />
               </folding>
             </state>
           </provider>
@@ -99,54 +121,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userKey/UserAttributeKey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/authority/AuthorityKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/authority/AuthSecretKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="196">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
-                <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#197#198#0" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ciphertext/AccessStructure.java">
+        <entry file="file://$PROJECT_DIR$/src/userKey/Userkeys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="498">
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding>
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#970#971#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-                <element signature="e#1035#1036#0" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+                <element signature="e#880#881#0" expanded="true" />
+                <element signature="e#1037#1038#0" expanded="true" />
+                <element signature="e#1070#1071#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
+                <element signature="e#1253#1254#0" expanded="true" />
+                <element signature="e#1346#1347#0" expanded="true" />
+                <element signature="e#1371#1372#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/authority/AuthPublicKey.java">
+        <entry file="file://$PROJECT_DIR$/src/userKey/UserSplitKeys.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="226">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveElement.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
+              <folding>
+                <element signature="e#1050#1051#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1132#1133#0" expanded="true" />
+                <element signature="e#1186#1187#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/z/ZrElement.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
             </state>
           </provider>
         </entry>
@@ -161,7 +197,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -177,14 +213,20 @@
         <option value="$PROJECT_DIR$/src/util/RwCPAbe.java" />
         <option value="$PROJECT_DIR$/src/globalAuthority/GlobalParam.java" />
         <option value="$PROJECT_DIR$/src/util/edgeCPAbe.java" />
-        <option value="$PROJECT_DIR$/src/ciphertext/Ciphertext.java" />
         <option value="$PROJECT_DIR$/src/userKey/UserAttributeKey.java" />
         <option value="$PROJECT_DIR$/src/authority/AuthorityKeys.java" />
         <option value="$PROJECT_DIR$/src/authority/AuthorityKey.java" />
+        <option value="$PROJECT_DIR$/src/authority/AuthorityPublicKeys.java" />
+        <option value="$PROJECT_DIR$/src/timeParam/EncParam.java" />
+        <option value="$PROJECT_DIR$/src/ciphertext/Ciphertext.java" />
         <option value="$PROJECT_DIR$/src/userKey/UserAuthorityKey.java" />
-        <option value="$PROJECT_DIR$/src/userKey/Userkeys.java" />
-        <option value="$PROJECT_DIR$/src/test/MyTestEdgeCPAbe.java" />
         <option value="$PROJECT_DIR$/src/util/EdgeCPAbe.java" />
+        <option value="$PROJECT_DIR$/src/test/MyTestEdgeCPAbe.java" />
+        <option value="$PROJECT_DIR$/src/userKey/Userkeys.java" />
+        <option value="$PROJECT_DIR$/src/ciphertext/LocaleCiphertext.java" />
+        <option value="$PROJECT_DIR$/src/util/EdgeTimeCPAbe.java" />
+        <option value="$PROJECT_DIR$/src/userKey/UserSplitKeys.java" />
+        <option value="$PROJECT_DIR$/src/test/MyTestEdgeTimeCPAbe.java" />
       </list>
     </option>
   </component>
@@ -208,6 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,6 +297,12 @@
               <item name="edgeCPAbe" type="b2602c69:ProjectViewProjectNode" />
               <item name="edgeCPAbe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edgeCPAbe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edgeCPAbe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="userKey" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -269,20 +319,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539589098918" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539843828428" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -308,7 +356,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MyTestEdgeTimeCPAbe">
     <configuration name="MyTestEdgeCPAbe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.MyTestEdgeCPAbe" />
       <module name="edgeCPAbe" />
@@ -322,8 +370,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyTestEdgeTimeCPAbe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.MyTestEdgeTimeCPAbe" />
+      <module name="edgeCPAbe" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MyTestEdgeCPAbe" />
+      <item itemvalue="Application.MyTestEdgeTimeCPAbe" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyTestEdgeTimeCPAbe" />
         <item itemvalue="Application.MyTestEdgeCPAbe" />
       </list>
     </recent_temporary>
@@ -346,17 +412,23 @@
       <workItem from="1539160684867" duration="2791000" />
       <workItem from="1539220991592" duration="16813000" />
       <workItem from="1539308534920" duration="8706000" />
-      <workItem from="1539567287621" duration="5735000" />
+      <workItem from="1539567287621" duration="8686000" />
+      <workItem from="1539653620713" duration="23774000" />
+      <workItem from="1539826714911" duration="2552000" />
+      <workItem from="1539829471430" duration="3316000" />
+      <workItem from="1539843880371" duration="1235000" />
+      <workItem from="1539845302368" duration="2440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57542000" />
+    <option name="totallyTimeSpent" value="93810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -365,8 +437,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23861171" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.24429968" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -374,8 +446,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.21389794" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.64386535" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32899022" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -397,6 +469,18 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/MyTestEdgeTimeCPAbe.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ciphertext/OrGate.java">
@@ -446,18 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/globalAuthority/GlobalParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#849#850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ciphertext/Message.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -465,53 +537,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ciphertext/Ciphertext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#1678#1679#0" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1807#1808#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/authority/AuthorityPublicKeys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/authority/AuthorityKeys.java" />
     <entry file="file://$PROJECT_DIR$/src/util/edgeCPAbeTool.java" />
-    <entry file="file://$PROJECT_DIR$/src/ciphertext/AccessStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding>
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/authority/AuthPublicKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -530,47 +557,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/userKey/UserAttributeKey.java">
+    <entry file="file://$PROJECT_DIR$/src/authority/AuthPublicKey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userKey/UserAuthorityKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userKey/Userkeys.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="e#1067#1068#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/MyTestEdgeCPAbe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="1225">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -579,8 +579,305 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/util/EdgeCPAbe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="156" lean-forward="true" selection-start-line="156" selection-end-line="156" />
+        <state relative-caret-position="975">
+          <caret line="200" column="45" selection-start-line="200" selection-start-column="45" selection-end-line="200" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#globalSetup#0;class#EdgeCPAbe#0" />
+            <element signature="method#authoritySetup#0;class#EdgeCPAbe#0" />
+            <element signature="method#encrypt#0;class#EdgeCPAbe#0" />
+            <element signature="method#keyGen#0;class#EdgeCPAbe#0" />
+            <element signature="method#dotProduct#0;class#EdgeCPAbe#0" />
+            <element signature="method#generateRandomMessage#0;class#EdgeCPAbe#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/JAVA/jdk/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3925">
+          <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
+          <folding>
+            <element signature="e#7577#7578#0" expanded="true" />
+            <element signature="e#7625#7626#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/timeParam/EncParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#414#415#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ciphertext/LocaleCiphertext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#164#165#0" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/pairing/PairingFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#1601#1602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractField.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ciphertext/AccessStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1835#1845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/globalAuthority/GlobalParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#1097#1098#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/authority/AuthorityPublicKeys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#722#723#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractPointElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#528#529#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractFieldOver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#673#674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ciphertext/Ciphertext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1786#1787#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/pairing/AbstractPairing.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#993#994#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/z/ZrField.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#1759#1760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/util/Arrays.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveField.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#2461#2462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/z/ZrElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userKey/UserAuthorityKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userKey/Userkeys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/EdgeTimeCPAbe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="263" column="28" lean-forward="true" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#globalSetup#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#userRegistry#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#authoritySetup#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#genEncParam#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#encrypt#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#keyGen#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#keysGen#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#timeKeysGen#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#timeKeyCombine#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#decrypt#0;class#EdgeTimeCPAbe#0" />
+            <element signature="method#dotProduct#0;class#EdgeTimeCPAbe#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userKey/UserSplitKeys.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jpbc-plaf-2.0.0.jar!/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#1007#1008#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userKey/UserAttributeKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/MyTestEdgeTimeCPAbe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+          <folding>
+            <element signature="method#EdgeTimeCPAbeTest#0;class#MyTestEdgeTimeCPAbe#0" />
+          </folding>
         </state>
       </provider>
     </entry>

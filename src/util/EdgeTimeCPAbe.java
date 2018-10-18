@@ -3,6 +3,7 @@ package util;
 import authority.*;
 import ciphertext.AccessStructure;
 import ciphertext.Ciphertext;
+import ciphertext.LocaleCiphertext;
 import ciphertext.Message;
 import globalAuthority.GlobalParam;
 import hashFunc.HashFunction;
@@ -11,15 +12,20 @@ import it.unisa.dia.gas.jpbc.Pairing;
 import it.unisa.dia.gas.plaf.jpbc.pairing.PairingFactory;
 import it.unisa.dia.gas.plaf.jpbc.pairing.a.TypeACurveGenerator;
 import org.apache.log4j.Logger;
+import timeParam.EncParam;
 import userKey.UserAttributeKey;
 import userKey.UserAuthorityKey;
+import userKey.UserSplitKeys;
 import userKey.Userkeys;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
-public class EdgeCPAbe {
-    private  static Logger log =Logger.getLogger(EdgeCPAbe.class);
+public class EdgeTimeCPAbe {
+    private  static Logger log =Logger.getLogger(EdgeTimeCPAbe.class);
     //first counstructed base CPABE
     public static GlobalParam globalSetup(int lambda) {
         //官方文档中rbits=160,lambda=512
@@ -36,7 +42,7 @@ public class EdgeCPAbe {
 
         return params;
     }
-    public static Userkeys userRegistry(String userID,GlobalParam GP){
+    public static Userkeys userRegistry(String userID, GlobalParam GP){
         Pairing pairing=PairingFactory.getPairing(GP.getPairingParameters());
         Element uJ=pairing.getZr().newRandomElement().getImmutable();
         Userkeys userkeys=new Userkeys(userID);
@@ -68,8 +74,25 @@ public class EdgeCPAbe {
 
         return authorityKeys;
     }
-    public static Ciphertext encrypt(Message message, AccessStructure arho, GlobalParam GP) {
-        Ciphertext ct=new Ciphertext();
+    public static EncParam genEncParam(GlobalParam GP, String fID, Date begin, Date end, String attribute){
+        Pairing pairing=PairingFactory.getPairing(GP.getPairingParameters());
+        EncParam encParam=new EncParam(fID);
+
+        Element r=pairing.getZr().newRandomElement().getImmutable();
+        String fileInfo=fID+begin.toString()+end.toString()+attribute+r.toBytes().toString();
+        Element tx=pairing.getZr().newElement();
+        tx.setFromBytes(fileInfo.getBytes());
+
+        Element attG1=HashFunction.hashToG1(pairing,attribute.getBytes()).getImmutable();
+        Element encP=attG1.powZn(tx);
+        encParam.setAttribute(attribute);
+        encParam.setBegin(begin);
+        encParam.setEnd(end);
+        encParam.setEncParam(encP.toBytes());
+        return encParam;
+    }
+    public static Ciphertext encrypt(Message message, Ciphertext ct,AccessStructure arho, GlobalParam GP,Map<String,byte[]> encParam) {
+//        Ciphertext ct=new Ciphertext();
 
         Pairing pairing = PairingFactory.getPairing(GP.getPairingParameters());
         AuthorityPublicKeys AKS=GP.getAPKS();
@@ -79,10 +102,9 @@ public class EdgeCPAbe {
         M=M.getImmutable();
 
 
-
         Element s= pairing.getZr().newRandomElement().getImmutable();
 
-        List<Element>  v =new ArrayList<>(arho.getL());
+        List<Element> v =new ArrayList<>(arho.getL());
         v.add(s);
 
         List<Element> w= new ArrayList<>(arho.getL());
@@ -99,10 +121,6 @@ public class EdgeCPAbe {
 
         Element c1=GP.getG().powZn(s);
         ct.setC1(c1.toBytes());
-
-//        Element cTest=pairing.getG1().newElement();
-//        cTest.setFromBytes(GP.getGa());
-//        ct.setcTest(cTest.powZn(s).toBytes());
 
 
         for (int i = 0; i <arho.getN() ; i++) {
@@ -127,13 +145,21 @@ public class EdgeCPAbe {
                 c0.mul(eggAi);
             }
 
-            Element c3x1=pairing.getG1().newElement();
-            c3x1.setFromBytes(GP.getGa());
-            Element c3x2= HashFunction.hashToG1(pairing,attribute.getBytes()).getImmutable();
-            ct.setC3(c3x1.powZn(lambdaX).mul(c3x2.powZn(rx)).toBytes());
+            Element gA=pairing.getG1().newElement();
+            gA.setFromBytes(GP.getGa());
+            Element attG1= HashFunction.hashToG1(pairing,attribute.getBytes()).getImmutable();
+            String key=ct.getfID() +attribute;
+            log.info("encParam in CT:="+key);
+            //加入时间参数
+            if(encParam.containsKey(key)){
+                Element timeParam=pairing.getG1().newElement();
+                timeParam.setFromBytes(encParam.get(key));
+                ct.setC3(gA.powZn(lambdaX).mul(timeParam.powZn(rx)).toBytes());
+            }else {
+                ct.setC3(gA.powZn(lambdaX).mul(attG1.powZn(rx)).toBytes());
+            }
 
             Element c4x=gYi.powZn(rx).mul(GP.getG().powZn(wx));
-//            Element c4x=gYi.powZn(rx);
             ct.setC4(c4x.toBytes());
 
             Element c5x=GP.getG().powZn(rx.negate());
@@ -161,7 +187,7 @@ public class EdgeCPAbe {
         uAKey.setLjk(ljk.powZn(t).toBytes());
 
 //        Element rjk=GP.getG().powZn(u);
-//        uAKey.setRjk(rjk.toBytes());
+//        uAKey.setRj(rjk.toBytes());
 
         Element hGID= HashFunction.hashToG1(pairing,userID.getBytes()).getImmutable();
 
@@ -193,7 +219,7 @@ public class EdgeCPAbe {
         }
         return uAKey;
     }
-    public static  Userkeys keysGen(List<UserAuthorityKey> userAKeys,Userkeys userkeys,GlobalParam GP){
+    public static  Userkeys keysGen(List<UserAuthorityKey> userAKeys, Userkeys userkeys,GlobalParam GP){
         Pairing pairing=PairingFactory.getPairing(GP.getPairingParameters());
         Element uUid=pairing.getZr().newElement();
         uUid.setFromBytes(userkeys.getuUid());
@@ -204,10 +230,92 @@ public class EdgeCPAbe {
         }
         return userkeys;
     }
+
+    public static UserSplitKeys edgeKeysGen(Userkeys userkeys,GlobalParam GP){
+        Pairing pairing=PairingFactory.getPairing(GP.getPairingParameters());
+        UserSplitKeys usk=new UserSplitKeys(userkeys.getUserID());
+        Userkeys edgeKeys=usk.getEdgeKeys();
+//        Userkeys edgeKeys=new Userkeys(userkeys.getUserID());
+
+        Element z=pairing.getZr().newRandomElement().getImmutable();
+
+        for(UserAuthorityKey uAK:userkeys.getUserAuthKeys().values()){
+            UserAuthorityKey edgeUAK=new UserAuthorityKey(uAK.getAuthority());
+            Element kjk=pairing.getG1().newElement();
+            kjk.setFromBytes(uAK.getKjk());
+            kjk.powZn(z.invert());
+            edgeUAK.setKjk(kjk.toBytes());
+
+            Element ljk=pairing.getG1().newElement();
+            ljk.setFromBytes(uAK.getLjk());
+            ljk.powZn(z.invert());
+            edgeUAK.setLjk(ljk.toBytes());
+
+            for (UserAttributeKey uAttKey: uAK.getUserAttKeys().values()){
+                String attribute =uAttKey.getAttribute();
+//                log.info("attribute in split Key:="+attribute);
+                UserAttributeKey edgeUAttKey=new UserAttributeKey(attribute);
+                Element kj_xk=pairing.getG1().newElement();
+                kj_xk.setFromBytes(uAttKey.getKj_xk());
+                kj_xk.powZn(z.invert());
+                edgeUAttKey.setKj_xk(kj_xk.toBytes());
+                edgeUAK.getUserAttKeys().put(attribute,edgeUAttKey);
+            }
+            edgeKeys.getUserAuthKeys().put(uAK.getAuthority(),edgeUAK);
+            log.info("authority in split Key:"+edgeKeys.getUserAuthKeys().keySet());
+        }
+        Element rJ=pairing.getG1().newElement();
+        rJ.setFromBytes(userkeys.getRj());
+        rJ.powZn(z.invert());
+        edgeKeys.setRj(rJ.toBytes());
+
+        Element hGIDZ=HashFunction.hashToG1(pairing,userkeys.getUserID().getBytes());
+        hGIDZ.powZn(z.invert());
+        edgeKeys.setPj(hGIDZ.toBytes());
+        edgeKeys.setuUid(userkeys.getuUid());
+        edgeKeys.setAttributes(userkeys.getAttributes());
+
+        usk.setZ(z.toBytes());
+//        usk.setEdgeKeys(edgeKeys);
+        return usk;
+    }
+
+    public static  byte[] timeKeysGen(String fID, String attribute, byte[]userSK,  EncParam encParam, GlobalParam GP){
+        Pairing pairing =PairingFactory.getPairing(GP.getPairingParameters());
+        Date now=new Date();
+        Element fUAttTx=pairing.getG1().newElement();
+        SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
+        if((now.compareTo(encParam.getBegin()))>=0 && (now.compareTo(encParam.getEnd()))<=0) {
+            log.info("begin Date:="+ft.format(encParam.getBegin()));
+            log.info("current Date:="+ft.format(now));
+            log.info("end Date:="+ft.format(encParam.getEnd()));
+            fUAttTx.setFromBytes(encParam.getEncParam());
+        }else
+            throw new IllegalArgumentException("illegality time");
+
+        Element fUAtt=HashFunction.hashToG1(pairing,attribute.getBytes()).getImmutable();
+        Element uJ=pairing.getZr().newElement();
+        uJ.setFromBytes(userSK);
+        uJ=uJ.getImmutable();
+
+        Element Tk=fUAttTx.powZn(uJ).mul(fUAtt.powZn(uJ.negate()));
+        return Tk.toBytes();
+    }
+    public static void timeKeyCombine(Userkeys userkeys,Map<String,byte[]> timeKeyMap,GlobalParam GP){
+        Pairing pairing=PairingFactory.getPairing(GP.getPairingParameters());
+        Map<String, String> authorityMap=GP.getAPKS().getTMap();
+        for(String attribute:timeKeyMap.keySet()){
+            String authority =authorityMap.get(attribute);
+            Element kj_xk=pairing.getG1().newElement();
+            kj_xk.setFromBytes(userkeys.getUserAuthKeys().get(authority).getUserAttKeys().get(attribute).getKj_xk());
+
+            Element timeKey=pairing.getG1().newElement();
+            timeKey.setFromBytes(timeKeyMap.get(attribute));
+            userkeys.getUserAuthKeys().get(authority).getUserAttKeys().get(attribute).setKj_xk(kj_xk.mul(timeKey).toBytes());
+        }
+    }
     public static Message decrypt(Ciphertext CT, Userkeys userkeys, GlobalParam GP ){
         List<Integer> toUse=CT.getAccessStructure().getIndexesList(userkeys.getAttributes());
-
-
 
         if(null == toUse || toUse .isEmpty()) throw new IllegalArgumentException("not satisfied");
 
@@ -253,13 +361,6 @@ public class EdgeCPAbe {
         log.info("NA in dec:="+nA);
         Element NA=pairing.getZr().newElement(nA);
 
-//        Element uJ=pairing.getZr().newElement();
-//        uJ.setFromBytes(userkeys.getuUid());
-//        Element rjk1=GP.getG().powZn(uJ);
-//        Element test=pairing.getG1().newElement();
-//        test.setFromBytes(CT.getcTest());
-//        Element eggASU=pairing.pairing(test,rjk1);
-//        log.info("eggASU="+eggASU);
         log.info("t="+t);
 
         t.powZn(NA);
@@ -285,7 +386,87 @@ public class EdgeCPAbe {
         return new Message(c0.toBytes());
 
     }
+    public static LocaleCiphertext outsourceDecrypt(Ciphertext CT, Userkeys userkeys, GlobalParam GP){
+        List<Integer> toUse=CT.getAccessStructure().getIndexesList(userkeys.getAttributes());
 
+        if(null == toUse || toUse .isEmpty()) throw new IllegalArgumentException("not satisfied");
+
+        LocaleCiphertext LC=new LocaleCiphertext(CT.getfID());
+
+        Pairing pairing = PairingFactory.getPairing(GP.getPairingParameters());
+
+        Element t=pairing.getGT().newOneElement();
+
+        Element rj=pairing.getG1().newElement();
+        rj.setFromBytes(userkeys.getRj());
+        rj=rj.getImmutable();
+
+        Element hGIDZ=pairing.getG1().newElement();
+        hGIDZ.setFromBytes(userkeys.getPj());
+        hGIDZ=hGIDZ.getImmutable();
+
+        for(Integer x :toUse){
+
+            String attribute=CT.getAccessStructure().rho(x);
+            String authorityID=GP.getAPKS().getTMap().get(attribute);
+
+            Element c3x=pairing.getG1().newElement();
+            c3x.setFromBytes(CT.getC3(x));
+            Element p3=pairing.pairing(c3x,rj);
+
+            Element kj_xk =pairing.getG1().newElement();
+            kj_xk.setFromBytes(userkeys.getUserAuthKeys().get(authorityID).getUserAttKeys().get(attribute).getKj_xk());
+            log.info("kj_xk"+kj_xk);
+            Element c5x=pairing.getG1().newElement();
+            c5x.setFromBytes(CT.getC5(x));
+            Element p4=pairing.pairing(kj_xk,c5x);
+
+            Element c4x=pairing.getG1().newElement();
+            c4x.setFromBytes(CT.getC4(x));
+
+            Element p5=pairing.pairing(hGIDZ,c4x);
+
+            t.mul(p3.mul(p4).mul(p5));
+        }
+        int nA=CT.getC2Map().keySet().size();
+        Element NA=pairing.getZr().newElement(nA);
+        t.powZn(NA);
+        t.invert();
+
+        for(String authority:CT.getC2Map().keySet()){
+            Element c1x= pairing.getG1().newElement();
+            c1x.setFromBytes(CT.getC1());
+            Element kjk =pairing.getG1().newElement();
+            kjk.setFromBytes(userkeys.getUserAuthKeys().get(authority).getKjk());
+            Element p1=pairing.pairing(c1x,kjk);
+
+            Element c2x=pairing.getG1().newElement();
+            c2x.setFromBytes(CT.getC2(authority));
+            Element ljk=pairing.getG1().newElement();
+            ljk.setFromBytes(userkeys.getUserAuthKeys().get(authority).getLjk());
+            Element p2 =pairing.pairing(c2x,ljk).invert();
+            t.mul(p1.mul(p2));
+        }
+        LC.setC0(CT.getC0());
+        LC.setC1(t.toBytes());
+        return LC;
+    }
+
+    public static Message localDecrypt(LocaleCiphertext LC,byte[] usk,GlobalParam GP){
+        Pairing pairing=PairingFactory.getPairing(GP.getPairingParameters());
+        Element z=pairing.getZr().newElement();
+        z.setFromBytes(usk);
+        z=z.getImmutable();
+
+        Element c0=pairing.getGT().newElement();
+        c0.setFromBytes(LC.getC0());
+
+        Element c1=pairing.getGT().newElement();
+        c1.setFromBytes(LC.getC1());
+        c1.powZn(z);
+        c0.mul(c1.invert());
+        return new Message(c0.toBytes());
+    }
     private static Element dotProduct(List<AccessStructure.MatrixElement> v1 , List<Element> v2 , Element element , Pairing pairing){
         if(v1.size()!=v2.size()) throw new IllegalArgumentException("different length in acess policy");
         if(element.isImmutable()) throw new IllegalArgumentException("result is immutable");
@@ -311,9 +492,5 @@ public class EdgeCPAbe {
         }
         return element;
     }
-    public static Message generateRandomMessage(GlobalParam GP){
-        Pairing pairing = PairingFactory.getPairing(GP.getPairingParameters());
-        Element M =pairing.getGT().newRandomElement().getImmutable();
-        return new Message(M.toBytes());
-    }
+
 }

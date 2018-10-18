@@ -11,6 +11,8 @@ public class Userkeys {
     private Map<String,UserAuthorityKey> userAuthKeys;
     private Set<String> attributes;
     private byte[] uUid;
+    private byte[] rj;
+    private byte[] pj;
 
 
     public Userkeys(String UserId) {
@@ -45,6 +47,25 @@ public class Userkeys {
 
     public void setuUid(byte[] uUid) {
         this.uUid = uUid;
+    }
+    public byte[] getRj() {
+        return rj;
+    }
+
+    public void setRj(byte[] rj) {
+        this.rj = rj;
+    }
+
+    public byte[] getPj() {
+        return pj;
+    }
+
+    public void setPj(byte[] pj) {
+        this.pj = pj;
+    }
+
+    public void setAttributes(Set<String> attributes) {
+        this.attributes = attributes;
     }
 
 }

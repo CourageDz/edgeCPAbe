@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Ciphertext {
     private static final long serialVersionUID = 1L;
+    private String fID;
     private byte[] c0;
     private byte[]c1;
     private Map<String,byte[]> c2;
@@ -12,25 +13,21 @@ public class Ciphertext {
     private List<byte[]> c5;
     private AccessStructure accessStructure;
 
-
-
-    private List<byte[]> gALambda;
-    private byte[] cTest;
-    public byte[] getcTest() {
-        return cTest;
-    }
-
-    public void setcTest(byte[] cTest) {
-        this.cTest = cTest;
-    }
-
     public Ciphertext() {
         c2 = new HashMap<>();
         c3 = new ArrayList<byte[]>();
         c4 = new ArrayList<byte[]>();
         c5 = new ArrayList<byte[]>();
-        gALambda=new ArrayList<>();
+        fID=generateRandomFid();
     }
+    public String generateRandomFid(){
+        Random random=new Random();
+        long time=System.currentTimeMillis();
+        long randomNum =time % 100000000;
+        String fID=String.valueOf(randomNum);
+        return fID;
+    }
+
 
     public byte[] getC0() {
         return c0;
@@ -81,13 +78,7 @@ public class Ciphertext {
     public void setC5(byte[] c5x) {
         this.c5.add(c5x);
     }
-    public byte[] getgALambda(int x) {
-        return gALambda.get(x);
-    }
 
-    public void setgALambda(byte[] galmbdax) {
-        this.gALambda.add(galmbdax);
-    }
     public AccessStructure getAccessStructure() {
         return accessStructure;
     }
@@ -95,5 +86,10 @@ public class Ciphertext {
     public void setAccessStructure(AccessStructure accessStructure) {
         this.accessStructure = accessStructure;
     }
+
+    public String getfID() {
+        return fID;
+    }
+
 
 }

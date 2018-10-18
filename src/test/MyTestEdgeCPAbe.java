@@ -50,7 +50,7 @@ public class MyTestEdgeCPAbe {
         uAKS.add(uAK1);
         uAKS.add(uAK2);
         uAKS.add(uAK3);
-        userkeys=EdgeCPAbe.keysGen(uAKS,userkeys);
+        userkeys=EdgeCPAbe.keysGen(uAKS,userkeys,GP);
         log.info("authorities:="+userkeys.getUserAuthKeys().keySet());
 
 
